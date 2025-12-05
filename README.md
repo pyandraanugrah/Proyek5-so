@@ -8,7 +8,7 @@ Adanya repo ini, yaitu untuk memenuhi tugas akhir mata kuliah sistem operasi.
 
 ## Cara Instalasi
 ```bash
-git clone https://github.com/username/linux-auto-daemon
+git clone https://github.com/username/Proyek5-so
 cd linux-auto-daemon
 
 sudo cp service/mydaemon.service /etc/systemd/system/
