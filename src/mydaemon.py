@@ -3,23 +3,31 @@ import time
 import logging
 from daemon import DaemonContext
 import os
-import logging
 
-log_path = os.path.join(os.path.expanduser("~"), "mydaemon.log")
+# Ambil direktori file mydaemon.py
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Path ke folder logs
+LOG_DIR = os.path.join(BASE_DIR, "..", "logs")
+LOG_FILE = os.path.join(LOG_DIR, "mydaemon.log")
 
-# Konfigurasi logging
-logging.basicConfig(
-    filename=log_path,
-    level=logging.INFO,
-    format="[%(asctime)s] %(message)s"
-)
+# Pastikan folder logs ada
+os.makedirs(LOG_DIR, exist_ok=True)
 
 def run():
+    logging.info("Daemon started")
     while True:
         logging.info("Daemon berjalan... monitoring sistem.")
         time.sleep(10)
 
 if __name__ == "__main__":
-    with DaemonContext():
+    with DaemonContext(
+        working_directory="/",
+        umask=0o022
+    ):
+        logging.basicConfig(
+            filename=LOG_FILE,
+            level=logging.INFO,
+            format="[%(asctime)s] %(message)s"
+        )
         run()
