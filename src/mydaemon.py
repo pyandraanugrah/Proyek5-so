@@ -2,10 +2,15 @@
 import time
 import logging
 from daemon import DaemonContext
+import os
+import logging
+
+log_path = os.path.join(os.path.expanduser("~"), "mydaemon.log")
+
 
 # Konfigurasi logging
 logging.basicConfig(
-    filename="/var/log/mydaemon.log",
+    filename=log_path,
     level=logging.INFO,
     format="[%(asctime)s] %(message)s"
 )
