@@ -8,7 +8,7 @@ Adanya repo ini, yaitu untuk memenuhi tugas akhir mata kuliah sistem operasi.
 
 ## Cara Instalasi
 ```bash
-git clone https://github.com/username/Proyek5-so
+git clone -b master https://github.com/username/Proyek5-so
 cd Proyek5-so
 
 sudo cp service/mydaemon.service /etc/systemd/system/
