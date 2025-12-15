@@ -15,3 +15,8 @@ sudo cp service/mydaemon.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable mydaemon
 sudo systemctl start mydaemon
+```
+
+## Link vidio demonstrasi instalasi
+```
+https://drive.google.com/drive/folders/1vRtM8tRFQED4ubI8ytocevUDLrYWHs8S?usp=sharing
