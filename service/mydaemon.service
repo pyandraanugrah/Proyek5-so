@@ -3,7 +3,7 @@ Description=Daemon Layanan Otomatis Linux
 After=network.target
 
 [Service]
-ExecStart=/bin/bash /path/to/linux-auto-daemon/service/start-daemon.sh
+ExecStart=/bin/bash /service/start-daemon.sh
 Restart=always
 User=root
 
