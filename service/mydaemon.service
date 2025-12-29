@@ -3,7 +3,7 @@ Description=Daemon Layanan Otomatis Linux
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/linux-auto-daemon/src/mydaemon.py
+ExecStart=/bin/bash /path/to/linux-auto-daemon/service/start-daemon.sh
 Restart=always
 User=root
 
